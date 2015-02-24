@@ -16,11 +16,11 @@
     <div class="page-header">
         <ul >
             <li class="listStyle" ng-repeat="(id, bookmark) in bookmarks | filter: search">
-                <label for="linkStyle"> 
+                  <span>{{bookmark.title + "  " + bookmark.url}}</span>
+                  <label for="linkStyle"> 
                     <button type="button" class="btn btn-default" ng-click="resetForm(); editForm(id, bookmark.title, bookmark.url); showEditing()" >Edit</button>
                     <button type="button" class="btn btn-default" ng-click="cancelEditing(); removeItem(id)">Remove</button>
                 </label>
-                  <span>{{bookmark.title + "  " + bookmark.url}}</span>
             </li>
         </ul>
     </div>

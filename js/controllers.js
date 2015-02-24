@@ -1,12 +1,12 @@
-myApp.controller('toReadController', function($scope, ItemsServiceBS){
+myApp.controller('toReadController', function($scope, ItemsServiceToRead){
     $scope.category = "toread";
-    $scope.bookmarks = ItemsServiceBS.getItems();
+    $scope.bookmarks = ItemsServiceToRead.getItems();
     
     $scope.cancelEditing();
     $scope.cancelCreating();
   
     $scope.addItem = function(title, url, id) {
-        ItemsServiceBS.addItem({
+       ItemsServiceToRead.addItem({
             title: title,
             url: url,
             category: $scope.category
@@ -14,13 +14,13 @@ myApp.controller('toReadController', function($scope, ItemsServiceBS){
     };
     
     $scope.removeItem = function (id) {
-        ItemsServiceBS.removeItem(id);
+        ItemsServiceToRead.removeItem(id);
     };
     
     $scope.updateItem = function() {
         $scope.bookmarks[$scope.itemId].title = $scope.bookmarkTitleEdit;
         $scope.bookmarks[$scope.itemId].url = $scope.bookmarkUrlEdit;
-        ItemsServiceBS.upadeItem($scope.itemId);
+        ItemsServiceToRead.upadeItem($scope.itemId);
     };
     
 
