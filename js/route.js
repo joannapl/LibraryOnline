@@ -9,6 +9,11 @@ myApp.config(function($routeProvider) {
             controller: 'toReadController'
         })
         
+        .when( '/read', {
+            templateUrl: 'templates/read.html',
+            controller: 'readController'
+        })
+        
         .otherwise({
             redirectTo: '/home'
     });

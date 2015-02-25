@@ -1,9 +1,10 @@
 
     var myApp = angular.module('myApp', ['ngRoute', 'firebase']);
-myApp.controller('mainCtrl', function($scope, ItemsService, ItemsServiceToRead) {
+myApp.controller('mainCtrl', function($scope, ItemsService, ItemsServiceToRead, ItemsServiceRead) {
     $scope.categories = [
         {"id": 0, "url": "#home", "name": "Home"},
-        {"id": 1, "url": "#toread", "name": "To read - wishlist"}
+        {"id": 1, "url": "#toread", "name": "To read - wishlist"},
+        {"id": 1, "url": "#read", "name": "Read"}
     ];
 
     $scope.placeHolderTitle = "Enter book's title...";
