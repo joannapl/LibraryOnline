@@ -1390,8 +1390,7 @@ a.bg-danger:hover {
 .page-header {
   padding: 10px 10px 10px 10px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
+  border-bottom: 1px solid black;
 }
 ul,
 ol {
@@ -3020,9 +3019,9 @@ fieldset[disabled] .btn {
   opacity: .65;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+  color: black;
+  background-color: #A88C3E;
+  border-color: black;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -3030,9 +3029,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: black;
+  background-color: #D4BA73;
+  border-color: black;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3065,9 +3064,9 @@ fieldset[disabled] .btn-default.active {
   background-color: #333;
 }
 .btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  color: black;
+  background-color: #A88C3E;
+  border-color: black;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -3075,9 +3074,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  color: black;
+  background-color: #D4BA73;
+  border-color: black;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3887,7 +3886,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #eee;
+  background-color: #816824;
   border-color: #337ab7;
 }
 .nav .nav-divider {
@@ -3920,7 +3919,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  background-color: #fff;
+  background-color: #816824;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
@@ -4839,12 +4838,18 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding: 30px 15px;
-  margin-bottom: 30px;
-  color: inherit;
-  /*background-color: #eee;*/
-  /*text-align: center;*/
+  margin-left: -15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #D7BF7E;
+  background-color: #241D0B;
+  text-align: center;
 }
+
+.jumbotron#addDiv, #editDiv{
+  color: black;
+}
+
 .jumbotron h1,
 .jumbotron .h1 {
   color: inherit;
