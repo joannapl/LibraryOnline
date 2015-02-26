@@ -1,14 +1,15 @@
 
     var myApp = angular.module('myApp', ['ngRoute', 'firebase']);
-myApp.controller('mainCtrl', function($scope, ItemsService, ItemsServiceToRead, ItemsServiceRead) {
+myApp.controller('mainCtrl', function($scope, ItemsService, ItemsServiceToRead, ItemsServiceRead, ItemsServiceFavourite) {
     $scope.categories = [
         {"id": 0, "url": "#home", "name": "Home"},
         {"id": 1, "url": "#toread", "name": "To read - wishlist"},
-        {"id": 1, "url": "#read", "name": "Read"}
+        {"id": 2, "url": "#read", "name": "Read"},
+        {"id": 3, "url": "#favourite", "name": "Favourite book"}
     ];
 
-    $scope.placeHolderTitle = "Enter book's title...";
-    $scope.placeHolderUrl = "Enter book's author...";
+    $scope.placeHolderTitle = "Enter title...";
+    $scope.placeHolderUrl = "Enter author...";
     
     $scope.isUpdated = false;
     $scope.itemId = null;
@@ -38,10 +39,3 @@ myApp.controller('mainCtrl', function($scope, ItemsService, ItemsServiceToRead, 
     };
 });
 
-myApp.controller('openTab', ['$scope', '$window',
-    function($scope, $window) {
-        $scope.openTab = function(id, bookmarkUrl){
-            $window.open(bookmarkUrl);
-        };
-    }
-]);

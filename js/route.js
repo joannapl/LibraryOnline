@@ -14,6 +14,11 @@ myApp.config(function($routeProvider) {
             controller: 'readController'
         })
         
+        .when( '/favourite', {
+            templateUrl: 'templates/favourite.html',
+            controller: 'favouriteController'
+        })
+        
         .otherwise({
             redirectTo: '/home'
     });
