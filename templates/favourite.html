@@ -12,18 +12,6 @@
         Add new book
         </button>
     </div>
-
-    <div class="page-header">
-        <ul>
-            <li class="listStyle" ng-repeat="(id, bookmark) in bookmarks | filter: search">
-                  <span>{{bookmark.title + "  " + bookmark.url}}</span>
-                  <label for="linkStyle"> 
-                    <button type="button" class="btn btn-default" ng-click="resetForm(); editForm(id, bookmark.title, bookmark.url); showEditing()" >Edit</button>
-                    <button type="button" class="btn btn-default" ng-click="cancelEditing(); removeItem(id)">Remove</button>
-                </label>
-            </li>
-        </ul>
-    </div>
     
     <div class="jumbotron" id="addDiv" ng-hide="hideCreate">
         <form role="form">
@@ -49,5 +37,17 @@
         </form>
         <button type="button" class="btn btn-primary" ng-click="updateItem(); cancelEditing();">Save</button>
         <button type="button" class="btn btn-default" ng-click="cancelEditing(); resetForm()">Cancel</button>
+    </div>
+
+    <div class="page-header">
+        <ul>
+            <li class="listStyle" ng-repeat="(id, bookmark) in bookmarks | filter: search">
+                  <span>{{bookmark.title + "  " + bookmark.url}}</span>
+                  <label for="linkStyle"> 
+                    <button type="button" class="btn btn-default" ng-click="resetForm(); editForm(id, bookmark.title, bookmark.url); showEditing()" >Edit</button>
+                    <button type="button" class="btn btn-default" ng-click="cancelEditing(); removeItem(id)">Remove</button>
+                </label>
+            </li>
+        </ul>
     </div>
 </div>
