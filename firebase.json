@@ -1,6 +1,6 @@
 {
-  "firebase": "application1",
-  "public": ".",
+  "firebase": "joannapl",
+  "public": "joanna1",
   "ignore": [
     "firebase.json",
     "**/.*",
