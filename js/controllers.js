@@ -118,7 +118,7 @@ myApp.controller('favouriteController', function($scope, ItemsServiceFavourite){
 });
 
 myApp.controller('quotesController', function($scope, ItemsServiceQuotes){
-    $scope.category = "favourite";
+    $scope.category = "quotes";
     $scope.bookmarks = ItemsServiceQuotes.getItems();
     
     $scope.cancelEditing();
@@ -129,7 +129,7 @@ myApp.controller('quotesController', function($scope, ItemsServiceQuotes){
             title: title,
             url: url,
             category: $scope.category
-        }, "favourite");
+        }, "quotes");
     };
     
     $scope.removeItem = function (id) {
