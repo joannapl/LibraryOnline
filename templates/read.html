@@ -3,13 +3,16 @@
         <h1><span class="pageSubtitle">Place for books which you read</span></h1>
     </div>
     
-    <div class="page-header">
-        <h4>Your list of books which you read:</h4>
-    </div>
-    
     <div class="form-inline">
         <input type="text" class="form-control" ng-model="search" placeholder="Search...">
+        <div id="buttonDiv">
+        <button type="button" class="btn btn-default" ng-click="resetForm(); showCreating()">
+        Add new book
+        </button>
     </div>
+    </div>
+    
+    
     
 
     <div class="page-header">
@@ -23,20 +26,13 @@
             </li>
         </ul>
     </div>
-    <div id="buttonDiv">
-        <button type="button" class="btn btn-default" ng-click="resetForm(); showCreating()">
-        Add new book
-        </button>
-    </div>
     
     <div class="jumbotron" id="addDiv" ng-hide="hideCreate">
         <form role="form">
              <div class="form-group">
-                <label for="bookmarkTitle">Book's title</label>
                 <input type="text" ng-model="bookmarkTitleAdd" class="form-control" id="bookmarkTitle" placeholder="{{placeHolderTitle}}">
             </div>
             <div class="form-group">
-                <label for="bookmarkUrl">Author</label>
                 <input type="text" ng-model="bookmarkUrlAdd" class="form-control" id="bookmarkUrl" placeholder="{{placeHolderUrl}}">
             </div>
         </form>
@@ -47,11 +43,9 @@
     <div class="jumbotron"  id="editDiv" ng-hide="hideEdit">
         <form role="form">
              <div class="form-group">
-                <label for="bookmarkTitle">Book Title</label>
                 <input type="text" ng-model="bookmarkTitleEdit" class="form-control" id="bookmarkTitle" placeholder="{{bookmark.title}}">
             </div>
             <div class="form-group">
-                <label for="bookmarkUrl">Book's author</label>
                 <input type="text" ng-model="bookmarkUrlEdit" class="form-control" id="bookmarkUrl" placeholder="{{bookmark.url}}">
             </div>
         </form>
