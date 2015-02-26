@@ -19,6 +19,11 @@ myApp.config(function($routeProvider) {
             controller: 'favouriteController'
         })
         
+        .when( '/quotes', {
+            templateUrl: 'templates/quotes.html',
+            controller: 'quotesController'
+        })
+        
         .otherwise({
             redirectTo: '/home'
     });

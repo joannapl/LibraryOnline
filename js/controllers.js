@@ -116,3 +116,41 @@ myApp.controller('favouriteController', function($scope, ItemsServiceFavourite){
         $scope.bookmarkUrlEdit = ul; 
     };
 });
+
+myApp.controller('quotesController', function($scope, ItemsServiceQuotes){
+    $scope.category = "favourite";
+    $scope.bookmarks = ItemsServiceQuotes.getItems();
+    
+    $scope.cancelEditing();
+    $scope.cancelCreating();
+  
+    $scope.addItem = function(title, url, id) {
+        ItemsServiceQuotes.addItem({
+            title: title,
+            url: url,
+            category: $scope.category
+        }, "favourite");
+    };
+    
+    $scope.removeItem = function (id) {
+        ItemsServiceQuotes.removeItem(id);
+    };
+    
+    $scope.updateItem = function() {
+        $scope.bookmarks[$scope.itemId].title = $scope.bookmarkTitleEdit;
+        $scope.bookmarks[$scope.itemId].url = $scope.bookmarkUrlEdit;
+        ItemsServiceQuotes.upadeItem($scope.itemId);
+    };
+    
+
+    $scope.resetForm = function () {
+        $scope.bookmarkTitleAdd = "";
+        $scope.bookmarkUrlAdd = "";
+    };
+    
+    $scope.editForm = function (id, ti, ul) {
+        $scope.itemId = id;
+        $scope.bookmarkTitleEdit = ti;
+        $scope.bookmarkUrlEdit = ul; 
+    };
+});
